@@ -1,0 +1,45 @@
+
+<nav class="navbar d-flex justify-content-between     navbar-expand-lg      top_navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">zaGaz</a>
+    <!-- <a class="" href="#"><i class="fa fa-bars"></i></a> -->
+    <button class="navbar-toggler" (click)="toogleNavbar()" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <ul class="navbar-nav px-3">
+      <li class="nav-item text-nowrap">
+        <a class="nav-link" href="#">Sign out</a>
+      </li>
+    </ul>
+  </nav>
+ <nav class="sidebar  mt-4" >
+    <div class="sidebar-sticky" [ngClass]="{'show': navbarOpen}">
+      <div class="text-center">
+      <img  src="../../assets/logo-blue.png" alt="logo">
+    </div>
+      <ul class="nav flex-column ml-3 mt-4">
+        <li class="nav-item p-2">
+            <a routerLink="/dashboard/kyc_approval_list">
+              <i class="fa fa-arrow-right mr-3"></i>KYC Approvals List
+          </a>
+        </li>
+        <li class="nav-item p-2">
+            <a routerLink="/charges_fees">
+              <i class="fa fa-arrow-right mr-3"></i> Set Charges And Fees
+          </a>
+        </li>
+        <li class="nav-item p-2">
+          <a routerLink="/registeredUser">
+            <i class="fa fa-arrow-right mr-3"></i> Pending Standing Instruction     
+          </a>
+        </li>
+        <li class="nav-item p-2">
+          <a routerLink="/wallet">
+            <i class="fa fa-arrow-right mr-3"></i>Manage Country Level<span class=""> Wallets</span> 
+          </a>
+        </li>        
+      </ul>
+
+     
+    </div>
+  </nav> 

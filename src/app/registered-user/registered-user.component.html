@@ -1,0 +1,98 @@
+<div class="container mt-4 pt-5 registered_user">
+  <div class="row">
+      <div class="col-lg-3">
+          <app-sidebar></app-sidebar>
+      </div>
+      <div class="col-lg-9 mt-3">
+        <!--Start Registered user-->
+        <div class="row ">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <strong><h5 class="m-2 text-left">Pending Standing Instruction </h5></strong>
+                    </div>
+                    <div class="card-body">
+                        <!--Table-->
+                        <div class="table-responsive">
+                        <table class="table table-bordered registered_user">
+        
+                            <!--Table head-->
+                            <thead class="bg-white">
+                                <tr class="bg-info text-white registered_head" >
+                                    
+                                    <th>Id</th>
+                                    <th>Bank Name</th>
+                                    <th>Application Id</th>
+                                    <th>Applied Date</th>
+                                    <th>Status</th>
+                                    <th>Check</th>
+                                </tr>
+                            </thead>
+                            <!--Table head-->
+        
+                            <!--Table body-->
+                            <tbody>
+                                <!-- <tr *ngFor="let user of userData">
+                                        <td>{{user.userId}}</td>
+                                        <td>{{user.bankName}}</td>
+                                        <td>{{user.applicationId}}</td>
+                                        <td>{{user.appliedDate}}</td>
+                                        <td>{{user.status}}</td>  
+                                </tr> -->
+                            <tr>
+                                <td>1</td>
+                                <td>Axis Bank</td>
+                                <td>389340</td>
+                                <td>26July2019</td>
+                                <td>Approved</td>
+                                <td><a class="text-primary" (click)=" openVerticallyCentered(content)">Edit</a></td>
+                            </tr>
+
+                              
+                            </tbody>
+                            <!--Table body-->
+                        </table>
+                        </div>
+                        <!--Table-->
+                    </div>
+                </div>
+            
+                        
+        
+                    
+            </div>
+        </div>
+        <!--End Registered user-->
+      </div>
+  </div>
+</div>      
+
+
+<ng-template #content let-modal>
+        <div class="modal-header">
+          <h4 class="modal-title" id="modal-basic-title">Bank Status</h4>
+          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <ol>
+              <li>User Id</li>
+              <li>Bank Name</li>
+              <li>Bank Account</li>
+              <li>Bank code</li>
+              <li>Application Id</li>
+          </ol>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-warning text-secondary" (click)="modal.close('Save click')">Cencel</button>
+            <button type="button" class="btn btn-info" (click)="modal.close('Save click')">Pending..</button>
+            <button type="button" class="btn btn-success" (click)="modal.close('Save click')">Approve</button>
+        </div>
+      </ng-template>
+      
+      
+      
+     
+      
+      <pre>{{closeResult}}</pre>
